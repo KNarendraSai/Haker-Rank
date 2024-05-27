@@ -1,0 +1,6 @@
+n_english = int(input().strip())
+english_subs = set(map(int, input().strip().split()))
+n_french = int(input().strip())
+french_subs = set(map(int, input().strip().split()))
+both_subs = english_subs.intersection(french_subs)
+print(len(both_subs))
