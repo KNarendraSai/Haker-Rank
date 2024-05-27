@@ -1,0 +1,5 @@
+n = int(input().strip())
+numbers = map(int, input().strip().split())
+t = tuple(numbers)
+hash_value = hash(t)
+print(hash_value)
