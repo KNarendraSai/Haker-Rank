@@ -1,13 +1,10 @@
-def average(arr):
-   distinct_heights = set(arr)
-   total_sum = sum(distinct_heights)
-   count = len(distinct_heights)
-   avg = total_sum / count
-   return round(avg, 3)
-
-
-
-if __name__ == "__main__":
-  arr = [154,161,167,170,171,174,176,182]
-  result = average(arr)
-  print(result)
+n = int(input().strip())
+student_marks = {}
+for _ in range(n):
+    name, *marks = input().split()
+    marks = list(map(float, marks))
+    student_marks[name] = marks
+query_name = input().strip()
+marks = student_marks[query_name]
+average = sum(marks) / len(marks)
+print("{:.2f}".format(average))
